@@ -18,6 +18,10 @@
   <img src="https://img.shields.io/badge/OpenSIN--AI-ecosystem-111827" alt="OpenSIN AI ecosystem" />
 </p>
 
+<p align="center">
+  <img src="assets/social-preview.svg" alt="OpenSIN Web Surface Plan preview" width="960" />
+</p>
+
 ## What this is
 
 This repo separates OpenSIN web presence into three layers:
@@ -54,6 +58,7 @@ node scripts/generate-docs.mjs
 
 - [`docs/board.md`](docs/board.md) — governance and architecture board
 - [`docs/standards.md`](docs/standards.md) — best practices and maintenance rules
+- [`docs/subpages.md`](docs/subpages.md) — source-backed subpage evaluation per domain
 - [`docs/inventory.md`](docs/inventory.md) — generated surface inventory
 - [`docs/matrix.md`](docs/matrix.md) — generated domain/repo/deploy matrix
 
@@ -72,10 +77,12 @@ node scripts/generate-docs.mjs
 ```text
 .
 ├── registry/web-surfaces.json
+├── assets/social-preview.svg
 ├── docs/
 │   ├── board.md
 │   ├── inventory.md
 │   ├── matrix.md
+│   ├── subpages.md
 │   └── standards.md
 ├── scripts/
 │   ├── generate-docs.mjs

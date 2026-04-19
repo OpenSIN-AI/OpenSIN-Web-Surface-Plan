@@ -1,0 +1,66 @@
+<svg width="1280" height="640" viewBox="0 0 1280 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="640" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#04070A"/>
+      <stop offset="0.55" stop-color="#071115"/>
+      <stop offset="1" stop-color="#06150F"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(980 180) rotate(90) scale(330 420)">
+      <stop stop-color="#10B981" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#10B981" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="stroke" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#34D399"/>
+      <stop offset="1" stop-color="#0EA5E9"/>
+    </linearGradient>
+    <filter id="blur" x="0" y="0" width="1280" height="640" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="40"/>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="640" fill="url(#bg)"/>
+  <circle cx="980" cy="180" r="240" fill="url(#glow)" filter="url(#blur)"/>
+  <circle cx="250" cy="520" r="180" fill="#10B981" fill-opacity="0.08" filter="url(#blur)"/>
+
+  <rect x="56" y="56" width="1168" height="528" rx="32" fill="#071014" fill-opacity="0.72" stroke="rgba(255,255,255,0.08)"/>
+
+  <text x="96" y="172" fill="#D1FAE5" font-family="Inter, ui-sans-serif, system-ui" font-size="22" letter-spacing="0.24em">OPENSIN-AI</text>
+  <text x="96" y="250" fill="#FFFFFF" font-family="Inter, ui-sans-serif, system-ui" font-size="66" font-weight="800">Web Surface Plan</text>
+  <text x="96" y="302" fill="#A7F3D0" font-family="Inter, ui-sans-serif, system-ui" font-size="26" font-weight="500">SSOT for domains, subpages, owners, deploy targets, and canonical routes.</text>
+
+  <g font-family="Inter, ui-sans-serif, system-ui" font-size="18" font-weight="700">
+    <rect x="96" y="360" width="168" height="52" rx="18" fill="rgba(16,185,129,0.12)" stroke="rgba(16,185,129,0.5)"/>
+    <text x="124" y="393" fill="#D1FAE5">Registry</text>
+
+    <rect x="278" y="360" width="168" height="52" rx="18" fill="rgba(14,165,233,0.12)" stroke="rgba(14,165,233,0.5)"/>
+    <text x="310" y="393" fill="#DBEAFE">Inventory</text>
+
+    <rect x="460" y="360" width="168" height="52" rx="18" fill="rgba(168,85,247,0.12)" stroke="rgba(168,85,247,0.5)"/>
+    <text x="503" y="393" fill="#F3E8FF">Matrix</text>
+
+    <rect x="642" y="360" width="168" height="52" rx="18" fill="rgba(251,191,36,0.12)" stroke="rgba(251,191,36,0.5)"/>
+    <text x="692" y="393" fill="#FEF3C7">Board</text>
+  </g>
+
+  <g>
+    <rect x="878" y="118" width="300" height="88" rx="20" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)"/>
+    <text x="906" y="152" fill="#FFFFFF" font-family="Inter, ui-sans-serif, system-ui" font-size="24" font-weight="700">opensin.ai</text>
+    <text x="906" y="179" fill="#9CA3AF" font-family="Inter, ui-sans-serif, system-ui" font-size="16">Marketing · SEO · Acquisition</text>
+
+    <rect x="878" y="222" width="300" height="88" rx="20" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)"/>
+    <text x="906" y="256" fill="#FFFFFF" font-family="Inter, ui-sans-serif, system-ui" font-size="24" font-weight="700">chat.opensin.ai</text>
+    <text x="906" y="283" fill="#9CA3AF" font-family="Inter, ui-sans-serif, system-ui" font-size="16">Login · Dashboard · Agents</text>
+
+    <rect x="878" y="326" width="300" height="88" rx="20" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)"/>
+    <text x="906" y="360" fill="#FFFFFF" font-family="Inter, ui-sans-serif, system-ui" font-size="24" font-weight="700">my.opensin.ai</text>
+    <text x="906" y="387" fill="#9CA3AF" font-family="Inter, ui-sans-serif, system-ui" font-size="16">Marketplace · Pricing · Watch</text>
+
+    <rect x="878" y="430" width="300" height="88" rx="20" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)"/>
+    <text x="906" y="464" fill="#FFFFFF" font-family="Inter, ui-sans-serif, system-ui" font-size="24" font-weight="700">docs.opensin.ai</text>
+    <text x="906" y="491" fill="#9CA3AF" font-family="Inter, ui-sans-serif, system-ui" font-size="16">Guide · API · Architecture</text>
+  </g>
+
+  <rect x="96" y="474" width="520" height="1.5" fill="rgba(255,255,255,0.08)"/>
+  <text x="96" y="522" fill="#6EE7B7" font-family="Inter, ui-sans-serif, system-ui" font-size="18" font-weight="600">Generated registry views · live surface inventory · source-backed subpage audit</text>
+  <text x="96" y="552" fill="#9CA3AF" font-family="Inter, ui-sans-serif, system-ui" font-size="15">OpenSIN-AI organization planning layer for web surfaces and route governance.</text>
+</svg>
