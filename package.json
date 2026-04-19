@@ -6,6 +6,7 @@
   "scripts": {
     "validate": "node scripts/validate-registry.mjs",
     "generate": "node scripts/generate-docs.mjs",
-    "subpages": "node scripts/generate-subpages.mjs"
+    "subpages": "node scripts/generate-subpages.mjs",
+    "audit": "node scripts/live-audit.mjs"
   }
 }

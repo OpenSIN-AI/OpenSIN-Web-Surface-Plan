@@ -47,13 +47,13 @@
       "url": "https://my.opensin.ai",
       "domain": "my.opensin.ai",
       "repo": "website-my.opensin.ai",
-      "deployTarget": "Vercel (verify)",
+      "deployTarget": "Vercel",
       "auth": "mixed",
-      "status": "needs-verification",
+      "status": "live",
       "owner": "commerce",
       "purpose": "Premium marketplace and subscription surface.",
       "routes": ["/", "/pricing", "/checkout", "/dashboard"],
-      "gaps": ["Canonical deploy target needs confirmation."]
+      "gaps": ["Pricing and FAQ are section-based within the landing shell; /pricing is not a distinct route handler."]
     },
     {
       "group": "knowledge",
@@ -76,14 +76,14 @@
       "name": "OpenSIN Blog",
       "url": "https://blog.opensin.ai",
       "domain": "blog.opensin.ai",
-      "repo": "website-blog.opensin.ai / Biz-SIN-Blog-Posts (verify)",
-      "deployTarget": "Vercel or Pages (verify)",
+      "repo": "website-blog.opensin.ai",
+      "deployTarget": "Cloudflare Pages",
       "auth": "public",
-      "status": "needs-verification",
+      "status": "live",
       "owner": "content",
       "purpose": "Engineering updates, announcements, and marketing content.",
       "routes": ["/", "/rss.xml", "/posts/*", "/tags/*"],
-      "gaps": ["Repository and deploy target need a canonical confirmation."]
+      "gaps": []
     },
     {
       "group": "api-control",
@@ -94,11 +94,11 @@
       "repo": "OpenSIN-Backend",
       "deployTarget": "Cloudflare Workers / API",
       "auth": "token-and-session",
-      "status": "live",
+      "status": "internal",
       "owner": "backend",
       "purpose": "Auth, billing, decision engine, persona engine, and subscription state.",
       "routes": ["/auth", "/billing", "/v1/stripe/webhook", "/v1/stripe/checkout", "/v1/subscription/status", "/v1/decide", "/v1/persona", "/v1/evaluate-study"],
-      "gaps": ["Stripe handlers are currently stubbed in bridge integration."]
+      "gaps": ["No public DNS resolution from audit environment; Stripe handlers are currently stubbed in bridge integration."]
     },
     {
       "group": "agent-registry",
@@ -109,11 +109,11 @@
       "repo": "website-opensin.ai",
       "deployTarget": "Cloudflare Pages",
       "auth": "public",
-      "status": "live",
+      "status": "404-on-probe",
       "owner": "web-growth",
       "purpose": "Public catalog surface for agents and discovery.",
       "routes": ["/agents"],
-      "gaps": []
+      "gaps": ["Route is not present in the current source and returns 404 on live probe."]
     },
     {
       "group": "agent-registry",
@@ -124,11 +124,11 @@
       "repo": "A2A-SIN-Stripe",
       "deployTarget": "HF Space / A2A registry",
       "auth": "public-card",
-      "status": "ready",
+      "status": "login-gated",
       "owner": "team-finance",
       "purpose": "Stripe automation specialist for payment links, onboarding plans, and webhook plans.",
       "routes": ["/agents/sin-stripe", "/.well-known/agent-card.json", "/a2a/v1"],
-      "gaps": ["HF Space landing URL probed as 404; deployment target needs verification."]
+      "gaps": ["Public route redirects to login; HF Space landing URL probed as 404; deployment target needs verification."]
     },
     {
       "group": "control-plane",
@@ -139,11 +139,11 @@
       "repo": "verify",
       "deployTarget": "verify",
       "auth": "internal",
-      "status": "unverified",
+      "status": "dns-missing",
       "owner": "control-plane",
       "purpose": "Fleet routing and governance coordination.",
       "routes": ["/", "/health", "/dashboard"],
-      "gaps": ["Repo and deploy target not yet confirmed in this plan."]
+      "gaps": ["No public DNS resolution from audit environment."]
     },
     {
       "group": "control-plane",
@@ -154,11 +154,11 @@
       "repo": "verify",
       "deployTarget": "verify",
       "auth": "internal",
-      "status": "unverified",
+      "status": "dns-missing",
       "owner": "platform",
       "purpose": "Specialized analysis entrypoint referenced by agent tooling.",
       "routes": ["/"],
-      "gaps": ["Canonical repo and deploy target need confirmation."]
+      "gaps": ["No public DNS resolution from audit environment."]
     },
     {
       "group": "community",
@@ -222,10 +222,10 @@
     }
   ],
   "openQuestions": [
-    "Confirm the canonical repo and deploy target for my.opensin.ai.",
-    "Confirm the canonical repo for blog.opensin.ai.",
-    "Confirm whether hermes.opensin.ai and code-analyzer.opensin.ai are live or placeholders.",
-    "Implement or remove the missing /pricing route on chat.opensin.ai.",
+    "Decide whether api.opensin.ai should remain a public surface or move to an internal-only registry.",
+    "Decide whether opensin.ai/agents should be removed, redirected, or relocated to chat.opensin.ai.",
+    "Decide whether hermes.opensin.ai and code-analyzer.opensin.ai are real internal surfaces or placeholders.",
+    "Clarify whether /pricing on my.opensin.ai is a section or a routable page in the canonical model.",
     "Replace stubbed Stripe handlers in the bridge integration or wire them to the A2A agent properly."
   ]
 }

@@ -15,34 +15,34 @@
 | Surface | URL | Repo | Deploy | Auth | Status | Routes | Gaps |
 |---|---|---|---|---|---|---|---|
 | OpenSIN Chat | https://chat.opensin.ai | OpenSIN-WebApp | Vercel | login-required | live | /<br />/login<br />/signup<br />/dashboard<br />/settings<br />/agents/sin-stripe | /pricing is not implemented yet. |
-| OpenSIN Marketplace | https://my.opensin.ai | website-my.opensin.ai | Vercel (verify) | mixed | needs-verification | /<br />/pricing<br />/checkout<br />/dashboard | Canonical deploy target needs confirmation. |
+| OpenSIN Marketplace | https://my.opensin.ai | website-my.opensin.ai | Vercel | mixed | live | /<br />/pricing<br />/checkout<br />/dashboard | Pricing and FAQ are section-based within the landing shell; /pricing is not a distinct route handler. |
 
 ## Knowledge
 
 | Surface | URL | Repo | Deploy | Auth | Status | Routes | Gaps |
 |---|---|---|---|---|---|---|---|
 | OpenSIN Documentation | https://docs.opensin.ai | OpenSIN-documentation | Vercel | public | live | /guide/*<br />/api/*<br />/architecture/*<br />/best-practices/*<br />/bridges/*<br />/examples/*<br />/fleet/*<br />/governance/*<br />/migrations/*<br />/plans/*<br />/plugins/*<br />/runbooks/*<br />/sdk/*<br />/tutorials/*<br />/audit/*<br />/03_ops/* | — |
-| OpenSIN Blog | https://blog.opensin.ai | website-blog.opensin.ai / Biz-SIN-Blog-Posts (verify) | Vercel or Pages (verify) | public | needs-verification | /<br />/rss.xml<br />/posts/*<br />/tags/* | Repository and deploy target need a canonical confirmation. |
+| OpenSIN Blog | https://blog.opensin.ai | website-blog.opensin.ai | Cloudflare Pages | public | live | /<br />/rss.xml<br />/posts/*<br />/tags/* | — |
 
 ## API and Control
 
 | Surface | URL | Repo | Deploy | Auth | Status | Routes | Gaps |
 |---|---|---|---|---|---|---|---|
-| OpenSIN API | https://api.opensin.ai | OpenSIN-Backend | Cloudflare Workers / API | token-and-session | live | /auth<br />/billing<br />/v1/stripe/webhook<br />/v1/stripe/checkout<br />/v1/subscription/status<br />/v1/decide<br />/v1/persona<br />/v1/evaluate-study | Stripe handlers are currently stubbed in bridge integration. |
+| OpenSIN API | https://api.opensin.ai | OpenSIN-Backend | Cloudflare Workers / API | token-and-session | internal | /auth<br />/billing<br />/v1/stripe/webhook<br />/v1/stripe/checkout<br />/v1/subscription/status<br />/v1/decide<br />/v1/persona<br />/v1/evaluate-study | No public DNS resolution from audit environment; Stripe handlers are currently stubbed in bridge integration. |
 
 ## Agent Registry
 
 | Surface | URL | Repo | Deploy | Auth | Status | Routes | Gaps |
 |---|---|---|---|---|---|---|---|
-| OpenSIN Agent Catalog | https://opensin.ai/agents | website-opensin.ai | Cloudflare Pages | public | live | /agents | — |
-| SIN-Stripe Agent Card | https://chat.opensin.ai/agents/sin-stripe | A2A-SIN-Stripe | HF Space / A2A registry | public-card | ready | /agents/sin-stripe<br />/.well-known/agent-card.json<br />/a2a/v1 | HF Space landing URL probed as 404; deployment target needs verification. |
+| OpenSIN Agent Catalog | https://opensin.ai/agents | website-opensin.ai | Cloudflare Pages | public | 404-on-probe | /agents | Route is not present in the current source and returns 404 on live probe. |
+| SIN-Stripe Agent Card | https://chat.opensin.ai/agents/sin-stripe | A2A-SIN-Stripe | HF Space / A2A registry | public-card | login-gated | /agents/sin-stripe<br />/.well-known/agent-card.json<br />/a2a/v1 | Public route redirects to login; HF Space landing URL probed as 404; deployment target needs verification. |
 
 ## Control Plane
 
 | Surface | URL | Repo | Deploy | Auth | Status | Routes | Gaps |
 |---|---|---|---|---|---|---|---|
-| Hermes Control Plane | https://hermes.opensin.ai | verify | verify | internal | unverified | /<br />/health<br />/dashboard | Repo and deploy target not yet confirmed in this plan. |
-| Code Analyzer Surface | https://code-analyzer.opensin.ai | verify | verify | internal | unverified | / | Canonical repo and deploy target need confirmation. |
+| Hermes Control Plane | https://hermes.opensin.ai | verify | verify | internal | dns-missing | /<br />/health<br />/dashboard | No public DNS resolution from audit environment. |
+| Code Analyzer Surface | https://code-analyzer.opensin.ai | verify | verify | internal | dns-missing | / | No public DNS resolution from audit environment. |
 
 ## Community
 

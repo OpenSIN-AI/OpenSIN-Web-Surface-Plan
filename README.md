@@ -6,6 +6,7 @@
 
 <p align="center">
   <a href="#quick-start">Quick Start</a> ·
+  <a href="#status-at-a-glance">Status</a> ·
   <a href="#layers">Layers</a> ·
   <a href="#docs">Docs</a> ·
   <a href="#registry">Registry</a>
@@ -30,6 +31,22 @@ This repo separates OpenSIN web presence into three layers:
 2. **Matrix** — how domains, repos, deploys, auth, and routes connect.
 3. **Board** — the operating rules and governance model.
 
+## Status at a glance
+
+| Surface | State | Notes |
+|---|---|---|
+| `opensin.ai` | live | Public marketing + discovery surface |
+| `chat.opensin.ai` | live / gated | Dashboard is live; some agent pages require login |
+| `my.opensin.ai` | live | Marketplace and pricing surface |
+| `blog.opensin.ai` | live | Cloudflare Pages blog |
+| `docs.opensin.ai` | live | Docs canonical knowledge layer |
+| `opensin.ai/agents` | 404 | Not live; do not market it as a public surface |
+| `api.opensin.ai` | internal | Backend surface exists, but public DNS is not verified here |
+
+For the full live probe report, see [`docs/live-audit.md`](docs/live-audit.md).
+
+**Current probe summary:** 5 live · 2 gated · 3 DNS-missing · 2 missing/404
+
 ## Layers
 
 ```mermaid
@@ -52,13 +69,17 @@ git clone https://github.com/OpenSIN-AI/OpenSIN-Web-Surface-Plan.git
 cd OpenSIN-Web-Surface-Plan
 node scripts/validate-registry.mjs
 node scripts/generate-docs.mjs
+node scripts/generate-subpages.mjs
+node scripts/live-audit.mjs
 ```
 
 ## Docs
 
 - [`docs/board.md`](docs/board.md) — governance and architecture board
 - [`docs/standards.md`](docs/standards.md) — best practices and maintenance rules
+- [`docs/overview.md`](docs/overview.md) — visual start page
 - [`docs/subpages.md`](docs/subpages.md) — source-backed subpage evaluation per domain
+- [`docs/live-audit.md`](docs/live-audit.md) — HTTP/DNS probe report
 - [`docs/inventory.md`](docs/inventory.md) — generated surface inventory
 - [`docs/matrix.md`](docs/matrix.md) — generated domain/repo/deploy matrix
 
@@ -80,12 +101,16 @@ node scripts/generate-docs.mjs
 ├── assets/social-preview.svg
 ├── docs/
 │   ├── board.md
+│   ├── overview.md
 │   ├── inventory.md
 │   ├── matrix.md
+│   ├── live-audit.md
 │   ├── subpages.md
 │   └── standards.md
 ├── scripts/
 │   ├── generate-docs.mjs
+│   ├── generate-subpages.mjs
+│   ├── live-audit.mjs
 │   └── validate-registry.mjs
 ├── llms.txt
 ├── llms-full.txt

@@ -6,7 +6,9 @@
 
 - [README](https://github.com/OpenSIN-AI/OpenSIN-Web-Surface-Plan/blob/main/README.md)
 - [Board](https://github.com/OpenSIN-AI/OpenSIN-Web-Surface-Plan/blob/main/docs/board.md)
+- [Overview](https://github.com/OpenSIN-AI/OpenSIN-Web-Surface-Plan/blob/main/docs/overview.md)
 - [Standards](https://github.com/OpenSIN-AI/OpenSIN-Web-Surface-Plan/blob/main/docs/standards.md)
+- [Live Audit](https://github.com/OpenSIN-AI/OpenSIN-Web-Surface-Plan/blob/main/docs/live-audit.md)
 - [Subpages](https://github.com/OpenSIN-AI/OpenSIN-Web-Surface-Plan/blob/main/docs/subpages.md)
 - [Inventory](https://github.com/OpenSIN-AI/OpenSIN-Web-Surface-Plan/blob/main/docs/inventory.md)
 - [Matrix](https://github.com/OpenSIN-AI/OpenSIN-Web-Surface-Plan/blob/main/docs/matrix.md)
