@@ -1,0 +1,17 @@
+# OpenSIN Web Surface Plan
+
+> Single source of truth for OpenSIN-AI websites, subpages, routes, owners, and deploy targets.
+
+## Documentation
+
+- [README](https://github.com/OpenSIN-AI/OpenSIN-Web-Surface-Plan/blob/main/README.md)
+- [Board](https://github.com/OpenSIN-AI/OpenSIN-Web-Surface-Plan/blob/main/docs/board.md)
+- [Standards](https://github.com/OpenSIN-AI/OpenSIN-Web-Surface-Plan/blob/main/docs/standards.md)
+- [Inventory](https://github.com/OpenSIN-AI/OpenSIN-Web-Surface-Plan/blob/main/docs/inventory.md)
+- [Matrix](https://github.com/OpenSIN-AI/OpenSIN-Web-Surface-Plan/blob/main/docs/matrix.md)
+
+## Key files
+
+- [Registry](https://github.com/OpenSIN-AI/OpenSIN-Web-Surface-Plan/blob/main/registry/web-surfaces.json)
+- [Validate script](https://github.com/OpenSIN-AI/OpenSIN-Web-Surface-Plan/blob/main/scripts/validate-registry.mjs)
+- [Generate script](https://github.com/OpenSIN-AI/OpenSIN-Web-Surface-Plan/blob/main/scripts/generate-docs.mjs)

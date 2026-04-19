@@ -1,0 +1,39 @@
+# OpenSIN Web Surface Plan - Full Context
+
+## Purpose
+
+This repository is the canonical planning layer for OpenSIN-AI web surfaces.
+It exists to avoid scattered lists of domains and subpages across multiple repos.
+
+## What it contains
+
+- A machine-readable registry of web surfaces.
+- A human-readable inventory.
+- A domain/repo/deploy matrix.
+- A governance board with best practices.
+- Validation and generation scripts.
+
+## Canonical principles
+
+- Registry-first.
+- Generated views second.
+- Unknowns must be labeled.
+- Subpages are grouped by route prefix.
+- Every live surface needs an owner, purpose, and status.
+
+## Main surfaces tracked
+
+- opensin.ai — marketing and SEO.
+- chat.opensin.ai — authenticated app and dashboard.
+- my.opensin.ai — premium marketplace.
+- docs.opensin.ai — documentation.
+- blog.opensin.ai — editorial and announcements.
+- api.opensin.ai — backend and billing API.
+- opensin.ai/agents — public agent catalog.
+- chat.opensin.ai/agents/sin-stripe — Stripe agent card.
+
+## Repository links
+
+- GitHub: https://github.com/OpenSIN-AI/OpenSIN-Web-Surface-Plan
+- Registry: https://github.com/OpenSIN-AI/OpenSIN-Web-Surface-Plan/blob/main/registry/web-surfaces.json
+- Docs: https://github.com/OpenSIN-AI/OpenSIN-Web-Surface-Plan/tree/main/docs

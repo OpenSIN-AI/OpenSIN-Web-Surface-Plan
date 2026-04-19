@@ -1,0 +1,10 @@
+{
+  "name": "opensin-web-surface-plan",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate-registry.mjs",
+    "generate": "node scripts/generate-docs.mjs"
+  }
+}
