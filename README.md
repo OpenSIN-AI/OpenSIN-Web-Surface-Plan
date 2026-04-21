@@ -40,13 +40,14 @@ This repo separates OpenSIN web presence into four layers:
 | `chat.opensin.ai` | live / gated | Dashboard is live; some agent pages require login |
 | `my.opensin.ai` | live | Marketplace and pricing surface |
 | `blog.opensin.ai` | live | Cloudflare Pages blog |
-| `docs.opensin.ai` | live | Docs canonical knowledge layer |
+| `docs.opensin.ai` | live | Consumer docs canonical knowledge layer |
+| `developers.opensin.ai` | live | Separate developer portal surface on Cloudflare Pages |
 | `opensin.ai/agents` | 404 | Not live; do not market it as a public surface |
 | `api.opensin.ai` | internal | Backend surface exists, but public DNS is not verified here |
 
 For the full live probe report, see [`docs/live-audit.md`](docs/live-audit.md).
 
-**Current probe summary:** 5 live · 2 gated · 3 DNS-missing · 2 missing/404
+**Current probe summary:** 6 live · 2 gated · 3 DNS-missing · 2 missing/404
 
 ## Layers
 

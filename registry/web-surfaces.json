@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-20",
+  "updatedAt": "2026-04-21",
   "organization": "OpenSIN-AI",
   "scope": "public-web-surfaces",
   "principles": [
@@ -66,8 +66,23 @@
       "auth": "public",
       "status": "live",
       "owner": "docs",
-      "purpose": "Docs, guides, best practices, architecture, and registry views.",
+      "purpose": "Consumer docs, guides, best practices, architecture, and registry views.",
       "routes": ["/guide/*", "/api/*", "/architecture/*", "/best-practices/*", "/bridges/*", "/examples/*", "/fleet/*", "/governance/*", "/migrations/*", "/plans/*", "/plugins/*", "/runbooks/*", "/sdk/*", "/tutorials/*", "/audit/*", "/03_ops/*"],
+      "gaps": []
+    },
+    {
+      "group": "knowledge",
+      "id": "developers-opensin-ai",
+      "name": "OpenSIN Developer Portal",
+      "url": "https://developers.opensin.ai",
+      "domain": "developers.opensin.ai",
+      "repo": "website-developers.opensin.ai",
+      "deployTarget": "Cloudflare Pages",
+      "auth": "public",
+      "status": "live",
+      "owner": "docs",
+      "purpose": "Developer docs, APIs, SDKs, auth, webhooks, and integration guidance.",
+      "routes": ["/", "/docs/*"],
       "gaps": []
     },
     {

@@ -31,8 +31,9 @@
 1. Keep the homepage guardrail issue active in Surface Plan.
 2. Merge the control-plane update in Surface Plan.
 3. Bootstrap the design contract in `awesome-OpenSIN-design` as `v0.1.0`.
-4. Merge docs homepage polish and best-practice subpages in `OpenSIN-documentation`.
-5. Release the docs refresh as `v1.1.0`.
+4. Merge consumer docs homepage polish and best-practice subpages in `OpenSIN-documentation`.
+5. Wire the split-surface developer portal in `website-developers.opensin.ai`.
+6. Release the consumer docs refresh as `v1.1.0`.
 
 ## Comment policy for non-obvious theme and design logic
 

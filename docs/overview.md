@@ -16,6 +16,7 @@ flowchart TB
   Matrix --> App["chat.opensin.ai"]
   Subpages --> Marketplace["my.opensin.ai"]
   Board --> Docs["docs.opensin.ai"]
+  Board --> DevDocs["developers.opensin.ai/docs"]
 
   classDef registry fill:#0f172a,stroke:#22c55e,stroke-width:2px,color:#ecfeff
   classDef doc fill:#e0f2fe,stroke:#0284c7,stroke-width:2px,color:#0f172a
@@ -34,7 +35,8 @@ flowchart TB
 | `chat.opensin.ai` | Live / gated | Dashboard is live; agent pages can require login. |
 | `my.opensin.ai` | Live | Marketplace and pricing surface is reachable. |
 | `blog.opensin.ai` | Live | Blog resolves via Cloudflare Pages. |
-| `docs.opensin.ai` | Live | Docs are the canonical knowledge layer. |
+| `docs.opensin.ai` | Live | Consumer docs are the canonical knowledge layer. |
+| `developers.opensin.ai` | Live | Developer docs live on a separate Cloudflare Pages surface. |
 | `api.opensin.ai` | Internal | Backend surface is tracked, but public DNS is not consistently resolvable from this environment. |
 | `opensin.ai/agents` | 404 | Not present in the current public source and should not be advertised as live. |
 | `hermes.opensin.ai` | Unresolved | No public DNS resolution in audit. |

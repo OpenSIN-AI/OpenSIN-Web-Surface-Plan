@@ -1,10 +1,10 @@
 # Docs Surface Refresh Control Plane
 
-> Program control plane for the docs surface refresh tracked by [OpenSIN-Web-Surface-Plan issue #2](https://github.com/OpenSIN-AI/OpenSIN-Web-Surface-Plan/issues/2).
+> Program control plane for the docs surface split tracked by [OpenSIN-Web-Surface-Plan issue #4](https://github.com/OpenSIN-AI/OpenSIN-Web-Surface-Plan/issues/4).
 
 ## Scope
 
-This file turns the docs surface refresh into an explicit control plane instead of a loose set of parallel tasks. It keeps the work VitePress-first, preserves the homepage contract from [`docs/docs-homepage-contract.md`](docs-homepage-contract.md), and sequences the downstream repos that deliver the actual UI work.
+This file turns the docs surface split into an explicit control plane instead of a loose set of parallel tasks. It keeps the consumer docs VitePress-first, preserves the homepage contract from [`docs/docs-homepage-contract.md`](docs-homepage-contract.md), and sequences the downstream repos that deliver the actual UI work.
 
 ## Machine-readable source of truth
 
@@ -18,21 +18,24 @@ This file turns the docs surface refresh into an explicit control plane instead 
 | --- | --- | --- |
 | `OpenSIN-AI/OpenSIN-Web-Surface-Plan` | Own the control-plane artifacts, dependency order, and release policy. | [#1](https://github.com/OpenSIN-AI/OpenSIN-Web-Surface-Plan/issues/1), [#2](https://github.com/OpenSIN-AI/OpenSIN-Web-Surface-Plan/issues/2) |
 | `OpenSIN-AI/awesome-OpenSIN-design` | Bootstrap the design contract used by downstream docs styling work. | [#1](https://github.com/OpenSIN-AI/awesome-OpenSIN-design/issues/1) → target `v0.1.0` |
-| `OpenSIN-AI/OpenSIN-documentation` | Implement homepage polish and best-practice subpages inside the existing VitePress contract. | [#142](https://github.com/OpenSIN-AI/OpenSIN-documentation/issues/142), [#143](https://github.com/OpenSIN-AI/OpenSIN-documentation/issues/143) → target `v1.1.0` |
+| `OpenSIN-AI/OpenSIN-documentation` | Implement consumer-docs polish and best-practice subpages inside the existing VitePress contract. | [#142](https://github.com/OpenSIN-AI/OpenSIN-documentation/issues/142), [#143](https://github.com/OpenSIN-AI/OpenSIN-documentation/issues/143) → target `v1.1.0` |
+| `OpenSIN-AI/website-developers.opensin.ai` | Implement the new Cloudflare-hosted developer portal for APIs, SDKs, auth, and webhooks. | [#4](https://github.com/OpenSIN-AI/OpenSIN-Web-Surface-Plan/issues/4) |
 
 ## Dependency and merge order
 
 1. Keep [issue #1](https://github.com/OpenSIN-AI/OpenSIN-Web-Surface-Plan/issues/1) as the standing homepage safeguard baseline.
 2. Merge [issue #2](https://github.com/OpenSIN-AI/OpenSIN-Web-Surface-Plan/issues/2) so downstream work inherits explicit sequencing, comment policy, and release targets.
 3. Land `awesome-OpenSIN-design` [issue #1](https://github.com/OpenSIN-AI/awesome-OpenSIN-design/issues/1) as release `v0.1.0`.
-4. Land `OpenSIN-documentation` [issue #142](https://github.com/OpenSIN-AI/OpenSIN-documentation/issues/142) for homepage polish.
+4. Land `OpenSIN-documentation` [issue #142](https://github.com/OpenSIN-AI/OpenSIN-documentation/issues/142) for consumer homepage polish.
 5. Land `OpenSIN-documentation` [issue #143](https://github.com/OpenSIN-AI/OpenSIN-documentation/issues/143) for best-practice subpages.
-6. Cut the docs release at `v1.1.0` after #142 and #143 are merged against the same VitePress contract.
+6. Wire the split-surface control plane in [issue #4](https://github.com/OpenSIN-AI/OpenSIN-Web-Surface-Plan/issues/4) and publish the developer portal as a separate Cloudflare Pages site.
+7. Cut the consumer docs release at `v1.1.0` after #142 and #143 are merged against the same VitePress contract.
 
 ## Semver and release policy
 
 - `awesome-OpenSIN-design` ships the design bootstrap as `v0.1.0` because it is the first reusable contract baseline.
-- `OpenSIN-documentation` ships the docs surface refresh as `v1.1.0` because the work is additive polish plus new best-practice surfaces, not a contract break.
+- `OpenSIN-documentation` ships the consumer docs refresh as `v1.1.0` because the work is additive polish plus new best-practice surfaces, not a contract break.
+- `website-developers.opensin.ai` ships independently on Cloudflare Pages because it is a separate surface for builders, not a theme fork of the consumer docs site.
 - Contract breaks, navigation resets, or any proven blocker that forces a move away from VitePress require a new decision record and a major-version discussion before implementation starts.
 
 ## Comment policy for non-obvious theme and design logic

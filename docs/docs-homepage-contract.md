@@ -10,9 +10,11 @@ The homepage must contain exactly these sections in this order:
 
 1. **Hero**
    - `OpenSIN-AI`
-   - `Dokumentation`
+   - `Consumer docs`
    - user-focused tagline
    - two CTA buttons
+   - primary CTA should favor the quick-start path
+   - secondary CTA must point builders to `developers.opensin.ai/docs`
    - button styling must remain compact (no pill reversion)
 
 2. **Three feature cards**
@@ -24,6 +26,7 @@ The homepage must contain exactly these sections in this order:
    - exactly 2 cards
    - one for users
    - one for developers
+   - developer card must deep-link to the builder surface
 
 4. **Related topics / ecosystem cards**
    - exactly 4 cards
@@ -61,15 +64,15 @@ stable.
 The following markers were verified on the live site and should remain true
 unless intentionally changed by product direction:
 
-- `Start using OpenSIN`
-- `Build an Agent`
+- `Start here`
+- `Developer docs`
 - `Choose Your Path`
 - `Related topics`
-- `Autonomous Fleet`
-- `A2A Protocol`
-- `Stealth Automation`
-- `OpenSIN Marketing`
-- `OpenSIN Marketplace`
-- `OpenSIN Dashboard`
-- `Domain Registry`
+- `Fast onboarding`
+- `Need the API?`
+- `Manage your plan`
+- `Consumer docs`
+- `Developer Documentation`
+- `MyOpenSIN`
+- `Surface registry`
 - `Why OpenSIN?` must be absent from homepage
