@@ -2,6 +2,8 @@
 
 This file is the canonical contract for the `docs.opensin.ai/` homepage.
 
+Tracking issue: [#1](https://github.com/OpenSIN-AI/OpenSIN-Web-Surface-Plan/issues/1)
+
 ## Non-negotiable structure
 
 The homepage must contain exactly these sections in this order:
@@ -53,3 +55,21 @@ The homepage must contain exactly these sections in this order:
 The docs homepage is a product surface, not a dumping ground for every mandate,
 table, or internal reference. It must stay clear, user-friendly, and visually
 stable.
+
+## Verified live markers
+
+The following markers were verified on the live site and should remain true
+unless intentionally changed by product direction:
+
+- `Start using OpenSIN`
+- `Build an Agent`
+- `Choose Your Path`
+- `Related topics`
+- `Autonomous Fleet`
+- `A2A Protocol`
+- `Stealth Automation`
+- `OpenSIN Marketing`
+- `OpenSIN Marketplace`
+- `OpenSIN Dashboard`
+- `Domain Registry`
+- `Why OpenSIN?` must be absent from homepage
