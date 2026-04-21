@@ -17,6 +17,7 @@ flowchart TB
   Subpages --> Marketplace["my.opensin.ai"]
   Board --> Docs["docs.opensin.ai"]
   Board --> DevDocs["developers.opensin.ai/docs"]
+  App --> MemberPortal["member.opensin.ai"]
 
   classDef registry fill:#0f172a,stroke:#22c55e,stroke-width:2px,color:#ecfeff
   classDef doc fill:#e0f2fe,stroke:#0284c7,stroke-width:2px,color:#0f172a

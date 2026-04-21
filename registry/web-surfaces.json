@@ -86,9 +86,20 @@
       "gaps": []
     },
     {
-      "group": "knowledge",
-      "id": "blog-opensin-ai",
-      "name": "OpenSIN Blog",
+      "group": "product-app",
+      "id": "member-opensin-ai",
+      "name": "OpenSIN Member Portal",
+      "url": "https://member.opensin.ai",
+      "domain": "member.opensin.ai",
+      "repo": "website-member.opensin.ai",
+      "deployTarget": "Cloudflare Pages",
+      "auth": "login-required",
+      "status": "planned",
+      "owner": "docs",
+      "purpose": "Contributor portal, API key management, and member dashboard.",
+      "routes": ["/login", "/dashboard/*", "/api/auth/*"],
+      "gaps": ["D1/R2 bindings and GitHub OAuth secrets need to be configured."]
+    },
       "url": "https://blog.opensin.ai",
       "domain": "blog.opensin.ai",
       "repo": "website-blog.opensin.ai",
