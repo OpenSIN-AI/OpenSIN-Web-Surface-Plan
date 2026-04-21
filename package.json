@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "validate": "node scripts/validate-registry.mjs",
+    "validate": "node scripts/validate-registry.mjs && node scripts/validate-control-plane.mjs",
     "generate": "node scripts/generate-docs.mjs",
     "subpages": "node scripts/generate-subpages.mjs",
     "audit": "node scripts/live-audit.mjs"

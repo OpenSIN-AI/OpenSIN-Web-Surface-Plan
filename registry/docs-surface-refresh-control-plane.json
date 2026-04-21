@@ -1,0 +1,253 @@
+{
+  "version": 1,
+  "updatedAt": "2026-04-21",
+  "program": {
+    "id": "docs-surface-refresh-v1-1-0",
+    "name": "OpenSIN docs surface refresh control plane",
+    "status": "active",
+    "branch": "feat/surface-refresh/issue-2-control-plane",
+    "baseBranch": "main",
+    "baseSha": "0fde4c78d4cc943976a4217d26236a53dc22d117",
+    "tracking": {
+      "issue": {
+        "repo": "OpenSIN-AI/OpenSIN-Web-Surface-Plan",
+        "number": 2,
+        "url": "https://github.com/OpenSIN-AI/OpenSIN-Web-Surface-Plan/issues/2"
+      },
+      "project": {
+        "id": 22,
+        "url": "https://github.com/orgs/OpenSIN-AI/projects/22"
+      }
+    },
+    "architecture": {
+      "docsRuntime": "VitePress",
+      "decision": "VitePress-first",
+      "changeBlockerRule": "Do not move docs to another framework without a documented blocker, migration decision, and replacement contract."
+    }
+  },
+  "repositoryResponsibilities": [
+    {
+      "repo": "OpenSIN-AI/OpenSIN-Web-Surface-Plan",
+      "role": "Program control plane and release-order source of truth for the docs surface refresh.",
+      "artifacts": [
+        "docs/docs-homepage-contract.md",
+        "registry/web-surfaces.json",
+        "registry/docs-surface-refresh-control-plane.json",
+        "docs/control-plane.md"
+      ]
+    },
+    {
+      "repo": "OpenSIN-AI/OpenSIN-documentation",
+      "role": "Implements the docs homepage polish, best-practice subpages, and any VitePress theme changes for release v1.1.0.",
+      "artifacts": [
+        "docs/.vitepress/*",
+        "docs/index.md",
+        "docs/best-practices/*"
+      ]
+    },
+    {
+      "repo": "OpenSIN-AI/awesome-OpenSIN-design",
+      "role": "Bootstraps the reusable design contract and shared design rules for downstream docs work.",
+      "artifacts": [
+        "README.md",
+        "design contract bootstrap docs",
+        "skill sync notes"
+      ]
+    }
+  ],
+  "issueRegistry": [
+    {
+      "id": "surface-plan-1",
+      "repo": "OpenSIN-AI/OpenSIN-Web-Surface-Plan",
+      "number": 1,
+      "title": "[docs surface] Track homepage contract and future visual changes",
+      "url": "https://github.com/OpenSIN-AI/OpenSIN-Web-Surface-Plan/issues/1",
+      "kind": "guardrail",
+      "status": "open",
+      "release": "continuous"
+    },
+    {
+      "id": "surface-plan-2",
+      "repo": "OpenSIN-AI/OpenSIN-Web-Surface-Plan",
+      "number": 2,
+      "title": "[Program] Control plane for docs surface refresh v1.1.0",
+      "url": "https://github.com/OpenSIN-AI/OpenSIN-Web-Surface-Plan/issues/2",
+      "kind": "program-control-plane",
+      "status": "open",
+      "release": "control-plane"
+    },
+    {
+      "id": "docs-142",
+      "repo": "OpenSIN-AI/OpenSIN-documentation",
+      "number": 142,
+      "title": "[Homepage] Premium visual refresh inside existing VitePress contract (target v1.1.0)",
+      "url": "https://github.com/OpenSIN-AI/OpenSIN-documentation/issues/142",
+      "kind": "homepage-polish",
+      "status": "todo",
+      "release": "v1.1.0"
+    },
+    {
+      "id": "docs-143",
+      "repo": "OpenSIN-AI/OpenSIN-documentation",
+      "number": 143,
+      "title": "[Best Practices] Normalize docs subpages, templates, and code surfaces (target v1.1.0)",
+      "url": "https://github.com/OpenSIN-AI/OpenSIN-documentation/issues/143",
+      "kind": "best-practice-subpages",
+      "status": "todo",
+      "release": "v1.1.0"
+    },
+    {
+      "id": "design-1",
+      "repo": "OpenSIN-AI/awesome-OpenSIN-design",
+      "number": 1,
+      "title": "[Bootstrap] Initialize design contract repo and sync awesome-opensin-design skill (target v0.1.0)",
+      "url": "https://github.com/OpenSIN-AI/awesome-OpenSIN-design/issues/1",
+      "kind": "design-bootstrap",
+      "status": "todo",
+      "release": "v0.1.0"
+    }
+  ],
+  "dependencyGraph": {
+    "nodes": [
+      "surface-plan-1",
+      "surface-plan-2",
+      "design-1",
+      "docs-142",
+      "docs-143"
+    ],
+    "edges": [
+      {
+        "from": "surface-plan-1",
+        "to": "docs-142",
+        "type": "guardrail-for",
+        "reason": "Homepage polish must preserve the existing homepage contract."
+      },
+      {
+        "from": "surface-plan-2",
+        "to": "design-1",
+        "type": "unblocks",
+        "reason": "The control plane defines ownership, sequencing, and release targets for the program."
+      },
+      {
+        "from": "surface-plan-2",
+        "to": "docs-142",
+        "type": "unblocks",
+        "reason": "Homepage work should follow the documented release order and comment policy."
+      },
+      {
+        "from": "surface-plan-2",
+        "to": "docs-143",
+        "type": "unblocks",
+        "reason": "Best-practice subpages share the same release and dependency policy."
+      },
+      {
+        "from": "design-1",
+        "to": "docs-142",
+        "type": "design-input",
+        "reason": "Homepage polish should consume the bootstrap design contract before visual refinement is merged."
+      },
+      {
+        "from": "design-1",
+        "to": "docs-143",
+        "type": "design-input",
+        "reason": "Best-practice pages should inherit shared design rules instead of inventing their own."
+      }
+    ]
+  },
+  "semverPolicy": {
+    "releases": [
+      {
+        "repo": "OpenSIN-AI/awesome-OpenSIN-design",
+        "target": "v0.1.0",
+        "reason": "Initial design contract bootstrap for downstream consumers."
+      },
+      {
+        "repo": "OpenSIN-AI/OpenSIN-documentation",
+        "target": "v1.1.0",
+        "reason": "Minor docs release because homepage polish and best-practice subpages add user-facing capability without breaking VitePress contracts."
+      }
+    ],
+    "rules": [
+      "Patch releases are for copy fixes, broken links, or non-structural styling corrections.",
+      "Minor releases are for additive homepage polish, new best-practice subpages, and theme improvements that keep the docs homepage contract intact.",
+      "Major releases require a documented contract break, navigation reset, or a proven VitePress blocker that forces a platform-level change.",
+      "The surface-plan repo records policy and dependency changes but does not drive the docs runtime version by itself."
+    ]
+  },
+  "mergeOrder": [
+    {
+      "step": 1,
+      "id": "surface-plan-2",
+      "repo": "OpenSIN-AI/OpenSIN-Web-Surface-Plan",
+      "release": "control-plane",
+      "reason": "Establish control-plane artifacts before downstream implementation starts."
+    },
+    {
+      "step": 2,
+      "id": "design-1",
+      "repo": "OpenSIN-AI/awesome-OpenSIN-design",
+      "release": "v0.1.0",
+      "reason": "Bootstrap the design contract used by downstream docs visual work."
+    },
+    {
+      "step": 3,
+      "id": "docs-142",
+      "repo": "OpenSIN-AI/OpenSIN-documentation",
+      "release": "v1.1.0",
+      "reason": "Land homepage polish inside the existing VitePress homepage contract."
+    },
+    {
+      "step": 4,
+      "id": "docs-143",
+      "repo": "OpenSIN-AI/OpenSIN-documentation",
+      "release": "v1.1.0",
+      "reason": "Land best-practice subpages after shared design decisions are available."
+    }
+  ],
+  "releaseOrder": [
+    {
+      "step": 1,
+      "repo": "OpenSIN-AI/awesome-OpenSIN-design",
+      "target": "v0.1.0",
+      "dependsOn": [
+        "surface-plan-2"
+      ]
+    },
+    {
+      "step": 2,
+      "repo": "OpenSIN-AI/OpenSIN-documentation",
+      "target": "v1.1.0",
+      "dependsOn": [
+        "surface-plan-1",
+        "surface-plan-2",
+        "design-1",
+        "docs-142",
+        "docs-143"
+      ]
+    }
+  ],
+  "commentPolicy": {
+    "scope": "Non-obvious theme, homepage, and design-contract logic in VitePress docs surfaces.",
+    "requiredFor": [
+      "CSS variables or selectors whose values preserve the homepage contract",
+      "hover, focus, motion, or responsive behavior that is intentionally different from default theme behavior",
+      "layout guards that prevent homepage and best-practice subpage styles from bleeding into each other",
+      "temporary design-contract shims that should later be replaced by awesome-OpenSIN-design artifacts"
+    ],
+    "requiredLocations": [
+      "adjacent code comment in the theme or style file",
+      "linked contract note in docs when the behavior becomes part of the lasting surface contract",
+      "PR or changelog note when the logic changes user-visible behavior"
+    ],
+    "forbidden": [
+      "comments that restate obvious CSS or HTML",
+      "undocumented magic numbers for spacing, motion, or breakpoints",
+      "silent theme overrides without a contract or release note reference"
+    ]
+  },
+  "changelogNotes": [
+    "Add a machine-readable control plane for the docs surface refresh program.",
+    "Lock merge and release sequencing across Surface Plan, OpenSIN-documentation, and awesome-OpenSIN-design.",
+    "Require comments for non-obvious VitePress theme and design-contract logic."
+  ]
+}
