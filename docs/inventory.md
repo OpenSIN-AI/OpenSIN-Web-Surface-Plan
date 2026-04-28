@@ -1,6 +1,6 @@
 # Inventory
 
-> Generated from `registry/web-surfaces.json` on 2026-04-20.
+> Generated from `registry/web-surfaces.json` on 2026-04-21.
 >
 > This is the human view of the SSOT.
 
@@ -22,6 +22,7 @@
 | Surface | URL | Repo | Deploy | Auth | Status | Routes | Gaps |
 |---|---|---|---|---|---|---|---|
 | OpenSIN Documentation | https://docs.opensin.ai | OpenSIN-documentation | Vercel | public | live | /guide/*<br />/api/*<br />/architecture/*<br />/best-practices/*<br />/bridges/*<br />/examples/*<br />/fleet/*<br />/governance/*<br />/migrations/*<br />/plans/*<br />/plugins/*<br />/runbooks/*<br />/sdk/*<br />/tutorials/*<br />/audit/*<br />/03_ops/* | — |
+| OpenSIN Developer Portal | https://developers.opensin.ai | website-developers.opensin.ai | Cloudflare Pages | public | live | /<br />/docs/* | — |
 | OpenSIN Blog | https://blog.opensin.ai | website-blog.opensin.ai | Cloudflare Pages | public | live | /<br />/rss.xml<br />/posts/*<br />/tags/* | — |
 
 ## API and Control

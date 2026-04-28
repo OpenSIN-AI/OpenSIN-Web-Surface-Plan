@@ -1,6 +1,6 @@
 # Matrix
 
-> Generated from `registry/web-surfaces.json` on 2026-04-20.
+> Generated from `registry/web-surfaces.json` on 2026-04-21.
 >
 > Domain → repo → deploy → auth → route group mapping.
 
@@ -10,6 +10,8 @@
 | chat.opensin.ai | https://chat.opensin.ai | OpenSIN-WebApp | Vercel | login-required | platform-app | live | /<br />/login<br />/signup<br />/dashboard<br />/settings<br />/agents/sin-stripe |
 | my.opensin.ai | https://my.opensin.ai | website-my.opensin.ai | Vercel | mixed | commerce | live | /<br />/pricing<br />/checkout<br />/dashboard |
 | docs.opensin.ai | https://docs.opensin.ai | OpenSIN-documentation | Vercel | public | docs | live | /guide/*<br />/api/*<br />/architecture/*<br />/best-practices/*<br />/bridges/*<br />/examples/*<br />/fleet/*<br />/governance/*<br />/migrations/*<br />/plans/*<br />/plugins/*<br />/runbooks/*<br />/sdk/*<br />/tutorials/*<br />/audit/*<br />/03_ops/* |
+| developers.opensin.ai | https://developers.opensin.ai | website-developers.opensin.ai | Cloudflare Pages | public | docs | live | /<br />/docs/*<br />/api-reference/* |
+| member.opensin.ai | https://member.opensin.ai | website-member.opensin.ai | Cloudflare Pages | login-required | app | planned | /login<br />/dashboard/* |
 | blog.opensin.ai | https://blog.opensin.ai | website-blog.opensin.ai | Cloudflare Pages | public | content | live | /<br />/rss.xml<br />/posts/*<br />/tags/* |
 | api.opensin.ai | https://api.opensin.ai | OpenSIN-Backend | Cloudflare Workers / API | token-and-session | backend | internal | /auth<br />/billing<br />/v1/stripe/webhook<br />/v1/stripe/checkout<br />/v1/subscription/status<br />/v1/decide<br />/v1/persona<br />/v1/evaluate-study |
 | opensin.ai | https://opensin.ai/agents | website-opensin.ai | Cloudflare Pages | public | web-growth | 404-on-probe | /agents |

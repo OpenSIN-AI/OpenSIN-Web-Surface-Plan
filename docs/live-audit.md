@@ -10,7 +10,7 @@
 | --- | --- |
 | 404 | 2 |
 | dns-missing | 3 |
-| live | 5 |
+| live | 6 |
 | login-gated | 2 |
 
 ## Probes
@@ -25,6 +25,7 @@
 | my.opensin.ai/pricing | https://my.opensin.ai/pricing | live | 200 | https://my.opensin.ai/pricing | MyOpenSIN — Modulare A2A-Teams für Output und Umsatz |
 | blog.opensin.ai | https://blog.opensin.ai | live | 200 | https://opensin-blog.pages.dev/ | OpenSIN Engineering Blog |
 | docs.opensin.ai | https://docs.opensin.ai | live | 200 | https://docs.opensin.ai/ | OpenSIN-AI Documentation |
+| developers.opensin.ai | https://developers.opensin.ai | live | 200 | https://developers.opensin.ai/ | OpenSIN Developers |
 | api.opensin.ai | https://api.opensin.ai | dns-missing | — | — | TypeError: fetch failed |
 | hermes.opensin.ai | https://hermes.opensin.ai | dns-missing | — | — | TypeError: fetch failed |
 | code-analyzer.opensin.ai | https://code-analyzer.opensin.ai | dns-missing | — | — | TypeError: fetch failed |
@@ -38,7 +39,7 @@
 
 ## CEO notes
 
-- Public marketing, chat, blog, and MyOpenSIN are reachable.
+- Public marketing, chat, blog, consumer docs, developer docs, and MyOpenSIN are reachable.
 - `chat.opensin.ai/agents/sin-stripe` exists, but public access is gated behind login.
 - `hermes.opensin.ai` and `code-analyzer.opensin.ai` do not resolve publicly from this environment.
 - `delqhi-sin-stripe.hf.space` currently returns 404.

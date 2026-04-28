@@ -2,7 +2,7 @@
 
 > Source-backed route inventory for OpenSIN-AI websites and supporting surfaces.
 >
-> Generated on 2026-04-19 from local repo sources.
+> Generated on 2026-04-21 from local repo sources.
 
 ## Overview
 
@@ -12,7 +12,7 @@
 | chat.opensin.ai | OpenSIN-WebApp | 162 | Largest surface; grouped by route family |
 | my.opensin.ai | website-my.opensin.ai | 3 | 2 active routes + 2 source-only page components |
 | blog.opensin.ai | website-blog.opensin.ai | 17 | Home + post pages from posts registry |
-| docs.opensin.ai | OpenSIN-documentation | 54 | Docs categories extracted from VitePress config |
+| docs.opensin.ai | OpenSIN-documentation | 60 | Docs categories extracted from VitePress config |
 | api.opensin.ai | OpenSIN-Backend + OpenSIN-Bridge | 22 | API prefixes and bridge endpoints |
 
 ## opensin.ai
@@ -616,13 +616,19 @@ Source: `OpenSIN-documentation/docs/.vitepress/config.mjs`
 | /architecture/a2a | active | Docs route |
 | /architecture/core | active | Docs route |
 | /architecture/global-brain-neural-bus | active | Docs route |
+| /architecture/hacker-bypass | active | Docs route |
 | /architecture/overview | active | Docs route |
 | /architecture/security | active | Docs route |
+| /examples/dual-auth-rotators | active | Docs route |
 | /examples/hello-world | active | Docs route |
 | /examples/multi-agent | active | Docs route |
+| /examples/telegram-bot | active | Docs route |
 | /fleet/overview | active | Docs route |
+| /governance/domain-registry | active | Docs route |
 | /governance/hermes | active | Docs route |
 | /governance/overview | active | Docs route |
+| /governance/repo-health-check | active | Docs route |
+| /governance/security-mandate | active | Docs route |
 | /governance/zeus | active | Docs route |
 | /guide/a2a-protocol | active | Docs route |
 | /guide/agent-basics | active | Docs route |
